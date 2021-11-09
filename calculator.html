@@ -1,0 +1,204 @@
+<html>
+ <head>
+    <title> Calculator </title>
+	<style type="text/css">
+	#box {
+	width: 350px;
+	height: 350px;
+	margin-left:500px;
+	margin-right:500px;
+	margin-top:200px;
+	background-color:skin;
+	border: solid black 2px;
+    }
+	.bolo {
+	width:50px;
+	height:30px;
+	margin-left:20px;
+	background-color:light-green;
+	     color: black; 
+         border: solid black 2px; 
+          }
+  
+   .bolo1{
+   width:50px;
+   height:30px;
+	margin-right:50px;
+	margin-left:20px;
+	background-color:light-green;
+	font-weight:bold;
+	color: black; 
+    border: solid black 2px; 
+}
+	
+	#firstbox{
+    background-color:white; 
+    border: solid black 2px; 
+	height:15%;
+	width:92%;
+	border-radius:0px;
+
+	border: solid black 2px; 
+	}
+		
+	</style>
+</head>
+
+<body>
+   
+  <fieldset id="box">
+    <legend> <strong> ANKUSH'S CALCULATOR </strong> </legend>
+    <div id="firstbox"></div>
+	<br>
+	<br>
+	  
+
+   <button class="bolo" id="AC">AC</button>
+   <button class="bolo" id="BACK"><</button>
+   <button class="bolo" id="perc">%</button>
+   <button class="bolo1" id="divi">/</button><br><br>
+   <button class="bolo" id="No7">7</button>
+   <button class="bolo" id="No8">8</button>
+   <button class="bolo" id="No9">9 </button>
+   <button class="bolo1" id="mult">X</button><br><br>
+   <button class="bolo" id="No4">4</button>
+   <button class="bolo" id="No5">5</button>
+   <button class="bolo" id="No6">6</button>
+   <button class="bolo1" id="minus">-</button><br><br>
+   <button class="bolo" id="No1">1</button>
+   <button class="bolo" id="No2">2</button>
+   <button class="bolo" id="No3">3</button> 
+   <button class="bolo1" id="plus">+</button><br><br>
+   <button class="bolo" id="hash">#</button>
+   <button class="bolo" id="Nozero">0</button>
+   <button class="bolo" id="point">.</button>
+   <button class="bolo" id="equals">=</button>
+   </fieldset>
+   
+
+   <script type="text/javascript">
+   
+   var x=""
+   var y=""
+   var op = ""
+   var screen = ""
+   var result = ""
+   var operator = ""
+   var round = Math.round
+   var result1 = ""
+   
+   
+   //taking the numbers
+   
+   document.getElementById("No9").onclick = function()
+   {document.getElementById("firstbox").innerHTML += "9"}
+   
+   document.getElementById("No8").onclick = function()
+   {document.getElementById("firstbox").innerHTML += "8"}
+   
+   document.getElementById("No7").onclick = function()
+   {document.getElementById("firstbox").innerHTML += "7"}
+   
+   document.getElementById("No6").onclick = function()
+   {document.getElementById("firstbox").innerHTML += "6"}
+   
+   document.getElementById("No5").onclick = function()
+   {document.getElementById("firstbox").innerHTML += "5"}
+   
+   document.getElementById("No4").onclick = function()
+   {document.getElementById("firstbox").innerHTML += "4"}
+   
+   document.getElementById("No3").onclick = function()
+   {document.getElementById("firstbox").innerHTML += "3"}
+   
+   document.getElementById("No2").onclick = function()
+   {document.getElementById("firstbox").innerHTML += "2"}
+   
+   document.getElementById("No1").onclick = function()
+   {document.getElementById("firstbox").innerHTML += "1"}
+ 
+  document.getElementById("Nozero").onclick = function()
+   {document.getElementById("firstbox").innerHTML += "0"}
+   
+     document.getElementById("point").onclick = function()
+   {document.getElementById("firstbox").innerHTML += "."}
+   
+    document.getElementById("AC").onclick = function()
+   {document.getElementById("firstbox").innerHTML = ""}
+   
+   
+   
+   // assignment operator
+   document.getElementById("minus").onclick = function()
+   {x = document.getElementById("firstbox").innerHTML
+   document.getElementById("firstbox").innerHTML += " - "
+      op = " - "}
+   
+   document.getElementById("mult").onclick = function()
+   {x = document.getElementById("firstbox").innerHTML
+   document.getElementById("firstbox").innerHTML += " X "
+   op = " X "
+    }
+   
+   document.getElementById("divi").onclick = function()
+   {op = " / "
+   alert("SORRY !!! This function is under progress right now")}
+   <!--document.getElementById("firstbox").innerHTML += " / "-->
+   
+   document.getElementById("plus").onclick = function()
+   { x = document.getElementById("firstbox").innerHTML
+   op = " + "
+   document.getElementById("firstbox").innerHTML += " + "
+    }
+    document.getElementById("equals").onclick = function()
+	{
+	result = document.getElementById("firstbox").innerHTML  
+	y = result.substr(x.length+3,10);
+    alert("PRESS '#' FOR CALCULATING YOUR ANSWER")
+}
+
+
+    document.getElementById("hash").onclick = function()
+	{ 
+	  if (op == " - "){
+	  document.getElementById("firstbox").innerHTML = x-y}
+	  
+	  if (op == " X "){
+	  document.getElementById("firstbox").innerHTML = x*y}
+	  
+	  if (op == " + "){
+	  document.getElementById("firstbox").innerHTML = parseInt(x)+parseInt(y)}
+	  
+	  if (op == " / "){	  
+	  alert("SORRY !!! This function is under progress right now")}
+	  
+	  }
+	
+
+
+
+
+
+	
+	
+	
+
+</script>
+
+
+</body>
+</html>	 
+	 
+	 
+	 
+   
+   
+   
+   
+   
+   
+   
+   
+      
+      
+	  
